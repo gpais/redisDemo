@@ -12,7 +12,7 @@ redis:
 spring:
    profiles: prod
 redis:
-  hostName: 192.168.56.105
+  hostName: test.kxeoys.0001.usw2.cache.amazonaws.com
   port: 6379
   
 ---
