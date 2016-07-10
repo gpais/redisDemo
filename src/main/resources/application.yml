@@ -1,0 +1,23 @@
+spring:
+  profiles.active: default
+---
+spring:
+  profiles: default
+
+redis:
+  hostName: 192.168.56.105
+  port: 6379
+
+---
+spring:
+   profiles: prod
+redis:
+  hostName: 192.168.56.105
+  port: 6379
+  
+---
+spring:
+   profiles: fail
+redis:
+  hostName: bla
+  port: 6379
