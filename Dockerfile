@@ -28,9 +28,9 @@ RUN mkdir -p /etc/pki/tls/certs
 RUN mkdir -p /etc/pki/tls/private
 
 ADD config.yml /opt/dropwizard/config.yml
-COPY target/com.LetsGetDigitalCassandra-0.0.1-SNAPSHOT.jar /opt/dropwizard/
+COPY target/LetsGetDigital-0.0.1-SNAPSHOT.jar /opt/dropwizard/
 WORKDIR /opt/dropwizard
-#RUN java -jar com.LetsGetDigitalCassandra-0.0.1-SNAPSHOT.jar db migrate config.yml
+#RUN java -jar LetsGetDigital-0.0.1-SNAPSHOT.jar db migrate config.yml
 
 
 ADD start.sh  /start.sh
