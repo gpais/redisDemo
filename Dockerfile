@@ -27,16 +27,13 @@ RUN mkdir /opt/dropwizard
 RUN mkdir -p /etc/pki/tls/certs
 RUN mkdir -p /etc/pki/tls/private
 
-ADD config.yml /opt/dropwizard/config.yml
+#ADD config.yml /opt/dropwizard/config.yml
 COPY target/LetsGetDigital-0.0.1-SNAPSHOT.jar /opt/dropwizard/
 WORKDIR /opt/dropwizard
 #RUN java -jar LetsGetDigital-0.0.1-SNAPSHOT.jar db migrate config.yml
 
 
 ADD start.sh  /start.sh
-
-
-
 RUN chmod 755 /start.sh
 
 VOLUME ["/opt/dropwizard/","/var/log/"]
@@ -44,7 +41,7 @@ VOLUME ["/opt/dropwizard/","/var/log/"]
 #WORKDIR /home/logstash
 CMD ["/bin/bash", "/start.sh"]
 
-run echo "asdasd 2"
+run echo "docker 2"
 EXPOSE 80
 EXPOSE 514
 EXPOSE 5043
