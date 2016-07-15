@@ -41,7 +41,7 @@ VOLUME ["/opt/dropwizard/","/var/log/"]
 #WORKDIR /home/logstash
 CMD ["/bin/bash", "/start.sh"]
 
-run echo "docker 2"
+run echo "docker 3"
 EXPOSE 80
 EXPOSE 514
 EXPOSE 5043
